@@ -6,6 +6,11 @@ steps:
     revision: master
     repo: https://github.com/nCodefresh/docker-spring-boot.git
 
+  unit-test-prj:
+    working-directory: ${{clone-jim}}
+    commands:
+      - echo $TEST
+
   build-docker-spring-boot:
     type: build
     description: spring maven project
@@ -13,6 +18,8 @@ steps:
     dockerfile: Dockerfile
     working-directory: ${{clone-prj}}
     tag: latest
+    environment:
+      - TEST=success
 
   push-dockerhub:
     type: push
