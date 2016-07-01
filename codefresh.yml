@@ -9,7 +9,7 @@ steps:
   build-docker-spring-boot:
     type: build
     description: spring maven project
-    image-name: ncodefresh/dockerspringboot
+    image-name: ncodefresh/dockerspringboot:master
     dockerfile: Dockerfile
     working-directory: ${{clone-prj}}
     tag: latest
