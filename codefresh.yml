@@ -3,23 +3,15 @@ version: '1.0'
 steps:
   clone-prj:
     type: git-clone
-    revision: master
     repo: https://github.com/nCodefresh/docker-spring-boot.git
-
-  unit-test-prj:
-    working-directory: ${{clone-jim}}
-    commands:
-      - echo $TEST
 
   build-docker-spring-boot:
     type: build
     description: spring maven project
-    image-name: ncodefresh/dsb
+    image-name: ncodefresh/test-docker-spring-boot
     dockerfile: Dockerfile
     working-directory: ${{clone-prj}}
     tag: latest
-    environment:
-      - TEST=success
 
   push-dockerhub:
     type: push
