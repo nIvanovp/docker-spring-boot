@@ -4,7 +4,7 @@ steps:
   build-docker-spring-boot:
     type: build
     description: spring maven project
-    image-name: ncodefresh/test-docker-spring-boot-push
+    image-name: ncodefresh/docker-spring-boot
     dockerfile: Dockerfile
     tag: latest
 
