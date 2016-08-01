@@ -10,13 +10,7 @@ steps:
 
   composition-step:
     type: composition
-    composition: [
-    version: '2'
-    services:
-      docker-spring-boot:
-        image: 'ncodefresh/dockerspringboot:master'
-
-    ]
+    composition: docker-spring-boot
     image-name: ${{build-step-name}}
     composition-variables:
       - IMAGE_NAME=docker-spring-boot
