@@ -10,7 +10,10 @@ steps:
 
   composition-step:
     type: composition
-    composition: docker-spring-boot
-    image-name: ${{build-step-name}}
+    composition-candidates:
+      docker-spring-boot:
+        image: 'ncodefresh/dockerspringboot:master'
+        ports:
+          - 8080
     composition-variables:
       - IMAGE_NAME=docker-spring-boot
