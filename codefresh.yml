@@ -12,7 +12,7 @@ steps:
     type: composition
     composition-candidates:
       docker-spring-boot:
-        image: 'ncodefresh/dockerspringboot:master'
+        image: 'ncodefresh/docker-spring-boot:master'
         ports:
           - 8080
     composition-variables:
