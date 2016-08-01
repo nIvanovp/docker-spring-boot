@@ -1,14 +1,15 @@
 version: '1.0'
 
 steps:
-  build-docker-spring-boot:
+  build-step-name:
     type: build
     description: spring maven project
     image-name: ncodefresh/docker-spring-boot
     dockerfile: Dockerfile
     tag: latest
 
-  push-dockerhub:
-    type: push
-    candidate: ${{build-docker-spring-boot}}
-    tag: latest
+  composition-step:
+    type: composition
+    image-name: ${{build-step-name}}
+    composition-variables:
+      - IMAGE_NAME=docker-spring-boot
