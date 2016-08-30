@@ -1,8 +1,7 @@
 #!/bin/sh
 
 x=0
-secs=600
-while [ "$x" -lt 10 ]; do
+while [ "$x" -lt 600 ]; do
    x=$((x+1))
    echo test log
    sleep 1
