@@ -1,7 +1,7 @@
 #!/bin/sh
 
 x=0
-secs=10
+secs=600
 while [ "$x" -lt 10 ]; do
    x=$((x+1))
    echo test log
