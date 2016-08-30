@@ -8,10 +8,12 @@ WORKDIR /code
 ADD pom.xml /code/pom.xml
 
 ADD src /code/src
+ADD log.sh /code/log.sh
+
 RUN ["mvn", "package"]
 
 RUN ls
-#RUN timeout 10 sh ./log.sh
+RUN timeout 10 sh ./log.sh
 VOLUME /tmp
 
 EXPOSE 8080
