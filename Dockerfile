@@ -10,7 +10,7 @@ ADD pom.xml /code/pom.xml
 ADD src /code/src
 RUN ["mvn", "package"]
 
-RUN timeout 10 sh "while true; do echo hello world; sleep 1; done"
+RUN timeout 10 sh log.sh
 VOLUME /tmp
 
 EXPOSE 8080
