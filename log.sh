@@ -1,7 +1,7 @@
 #!/bin/sh
 
 x=0
-while [ "$x" -lt 300 ]; do
+while [ "$x" -lt 1000 ]; do
    x=$((x+1))
    echo test log
    echo test log
