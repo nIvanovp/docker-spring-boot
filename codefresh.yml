@@ -13,12 +13,12 @@ steps:
     candidate: ${{build-step-name}}
     tag: latest
 
-  composition-step:
-    type: composition
-    composition-candidates:
-      docker-spring-boot:
-        image: 'ncodefresh/docker-spring-boot:latest'
-        ports:
-          - 8080
-    composition-variables:
-      - IMAGE_NAME=docker-spring-boot
+#  composition-step:
+#    type: composition
+#    composition-candidates:
+#      docker-spring-boot:
+#        image: 'ncodefresh/docker-spring-boot:latest'
+#        ports:
+#          - 8080
+#    composition-variables:
+#      - IMAGE_NAME=docker-spring-boot
