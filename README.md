@@ -1,4 +1,6 @@
+[![Codefresh build status]( {{BADGE_LINK}} )]( {{URL_TO_PIPELINE}} )
 # docker-spring-boot
+
 https://spring.io/guides/gs/spring-boot-docker/
 
 ## Run example
