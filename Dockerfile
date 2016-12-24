@@ -10,6 +10,7 @@ ADD pom.xml /code/pom.xml
 ADD src /code/src
 ADD log.sh /code/log.sh
 
+
 #RUN sh ./log.sh
 
 RUN ["mvn", "package"]
