@@ -1,4 +1,4 @@
-[![Codefresh build status]( {{BADGE_LINK}} )]( http://codefresh.dev/repositories/nCodefresh/docker-spring-boot/services )
+[![Codefresh build status]( https://g.codefresh.io/api/badges/build?pipeline=585e5a1e5cf01d574e8e4f9d&branch=master )]( http://codefresh.dev/repositories/nCodefresh/docker-spring-boot/services )
 # docker-spring-boot
 
 https://spring.io/guides/gs/spring-boot-docker/
