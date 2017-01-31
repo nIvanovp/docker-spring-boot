@@ -15,6 +15,9 @@ steps:
 
   composition-step:
     type: composition
+    composition:
+      service1:
+        image: node:latest
     composition-candidates:
       docker-spring-boot:
         image: 'ncodefresh/docker-spring-boot:latest'
