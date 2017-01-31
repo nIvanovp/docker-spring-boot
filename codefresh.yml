@@ -1,7 +1,7 @@
 version: '1.0'
 
 steps:
-  build-step-name:
+  build_prj:
     type: build
     description: spring maven project
     image-name: ncodefresh/docker-spring-boot
