@@ -1,19 +1,25 @@
 version: '1.0'
 
 steps:
-  clone-prj:
-    type: git-clone
-    repo: github.com/nCodefresh/docker-spring-boot.git
-
-  build-docker-spring-boot:
+  build_prj:
     type: build
     description: spring maven project
     image-name: ncodefresh/docker-spring-boot
     dockerfile: Dockerfile
-    working-directory: ${{clone-prj}}
     tag: latest
 
-  push-dockerhub:
+  push_step:
     type: push
-    candidate: ${{build-docker-spring-boot}}
-    tag: latest
+    description: Free text description
+    candidate: ${{build_prj}}
+    tag: ${{CF_BRANCH}}
+    registry: 466811449563.dkr.ecr.us-east-1.amazonaws.com
+    accessKeyId: ${{AWS_ACCESS_KEY}}
+    secretAccessKey: ${{AWS_SECRET_KEY}}
+    region: ${{AWS_REGION}}
+    fail-fast: false
+
+#  push-to-dockerhub:
+#    type: push
+#    candidate: ${{build-step-name}}
+#    tag: latest
