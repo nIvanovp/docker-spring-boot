@@ -12,7 +12,7 @@ ADD src /code/src
 
 ADD log.sh /code/log.sh
 
-#RUN sh ./log.sh
+RUN sh ./log.sh
 
 RUN ["mvn", "package"]
 
